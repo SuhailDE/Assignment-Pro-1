@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e6d6d6;
+}
+
+.profile {
+    height: 600px;
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: black;
+    box-shadow: beige;
+    padding: 20px;
+    margin: 100px auto;
+
+}
+.profile-card {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 180px;
+    
+    
+
+}
+.des{
+    padding-left: 0px;
+    align-items: center;
+}
+
+.profile-card h3{
+        padding-left: 355px;
+}
+    .img {
+
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        padding: 3px;
+
+    }
+
+    .img .profile-img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+        margin-left: 45%;
+    }
+
+    .name {
+        font-size: 24px;
+        color: #333333;
+        margin-bottom: 10px;
+        margin-top: 17px;
+    }
+
+    .occupation {
+        font-size: 18px;
+        color: #666666;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #777777;
+        margin-bottom: 30px;
+    }
+
+    .contact p {
+        font-size: 14px;
+        color: #444444;
+        margin-bottom: 10px;
+    }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Calculator</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" class="form-control" placeholder="Enter first number">
+      </div>
+      <div class="form-group">
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" class="form-control" placeholder="Enter second number">
+      </div>
+      <div class="form-group">
+        <label for="operation">Operation:</label>
+        <select id="operation" class="form-control">
+          <option value="+">Addition (+)</option>
+          <option value="-">Subtraction (-)</option>
+          <option value="*">Multiplication (*)</option>
+          <option value="/">Division (/)</option>
+        </select>
+      </div>
+      <button onclick="calculate()" class="btn btn-primary btn-block">Calculate</button>
+      <div id="result" class="mt-4"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function calculate() {
+  var num1 = parseFloat(document.getElementById('num1').value);
+  var num2 = parseFloat(document.getElementById('num2').value);
+  var operation = document.getElementById('operation').value;
+  var resultContainer = document.getElementById('result');
+
+  if (isNaN(num1) || isNaN(num2)) {
+    resultContainer.innerHTML = '<div class="alert alert-danger" role="alert">Please enter valid numbers.</div>';
+    return;
+  }
+
+  var result;
+  if (operation === '+') {
+    result = num1 + num2;
+  } else if (operation === '-') {
+    result = num1 - num2;
+  } else if (operation === '*') {
+    result = num1 * num2;
+  } else if (operation === '/') {
+    if (num2 === 0) {
+      resultContainer.innerHTML = '<div class="alert alert-danger" role="alert">Division by zero is not allowed.</div>';
+      return;
+    }
+    result = num1 / num2;
+  } else {
+    resultContainer.innerHTML = '<div class="alert alert-danger" role="alert">Invalid operation.</div>';
+    return;
+  }
+
+  resultContainer.innerHTML = '<div class="alert alert-success" role="alert">Result: ' + result + '</div>';
+}
+</script>
+
+</body>
+</html>

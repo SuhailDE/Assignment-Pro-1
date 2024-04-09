@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Bank Account Management</h1>
+        <div class="row mt-12">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Account 1
+                    </div>
+                    <div class="card-body">
+                        <p>Account Number: <span id="acc1Number">1001</span></p>
+                        <p>Owner Name: <span id="acc1Owner">John Doe</span></p>
+                        <p>Balance: <span id="acc1Balance">$0</span></p>
+                        <div class="form-group">
+                            <label for="acc1Deposit">Deposit Amount:</label>
+                            <input type="number" class="form-control" id="acc1Deposit">
+                        </div>
+                        <button class="btn btn-primary" onclick="deposit('acc1')">Deposit</button>
+                        <div class="form-group mt-3">
+                            <label for="acc1Withdraw">Withdraw Amount:</label>
+                            <input type="number" class="form-control" id="acc1Withdraw">
+                        </div>
+                        <button class="btn btn-danger" onclick="withdraw('acc1')">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
